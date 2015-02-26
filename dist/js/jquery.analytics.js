@@ -8,7 +8,7 @@
  * https://github.com/Mashape/analytics-jquery-agent/blob/master/LICENSE
  *
  * @version 1.0.0
- * @date Wed Feb 25 2015 18:10:10 GMT-0800 (PST)
+ * @date Thu Feb 26 2015 15:57:00 GMT-0800 (PST)
  */
 
 (function (factory) {
@@ -73,8 +73,9 @@
     init: function () {
       if (this.fetchClientIp) {
         jQuery.ajax({
-          url: 'http://httpbin.org/ip',
+          url: 'http://httpconsole.com/ip',
           type: 'GET',
+          headers: {'Accept':'yaml'},
           global: false,
           success: function (data) {
             clientIp = data.origin

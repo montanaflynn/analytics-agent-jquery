@@ -73,8 +73,9 @@
     init: function () {
       if (this.fetchClientIp) {
         jQuery.ajax({
-          url: 'http://httpbin.org/ip',
+          url: 'http://httpconsole.com/ip',
           type: 'GET',
+          headers: {'Accept':'yaml'},
           global: false,
           success: function (data) {
             clientIp = data.origin
