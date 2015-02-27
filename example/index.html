@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="jquery.analytics.min.js"></script>
+
+		<script type="text/javascript">
+
+			// Initialize analytics plugin with a service token from apianalytics.com
+			$.Analytics('SERVICE_TOKEN')
+
+			// Now send an AJAX request which will be logged and available on apianalytics.com
+			$.ajax({
+			  url: "http://httpconsole.com/agent"
+			}).done(function(data) {
+			  console.log("Hello agent " + data)
+			})
+
+		</script>
+    </body>
+</html>
