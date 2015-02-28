@@ -38,7 +38,6 @@ gulp.task('build', ['clean'], function () {
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(dist + 'js'))
-    .pipe(gulp.dest('example'))
 })
 
 gulp.task('archive', function () {
